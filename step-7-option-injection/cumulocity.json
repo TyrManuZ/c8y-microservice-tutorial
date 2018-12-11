@@ -1,0 +1,22 @@
+{
+	"apiVersion": "1",
+	"version": "0.7",
+	"provider": {
+  		"name": "Tobias Sommer"
+	},
+	"isolation": "MULTI_TENANT",
+	"requiredRoles": [
+		"ROLE_MEASUREMENT_READ"
+	],
+	"roles":[
+		"ROLE_AVERAGE_CALCULATION_READ"
+	],
+	"livenessProbe":{
+		"httpGet":{
+		  "path": "/health",
+		  "port": 80
+		},
+		"initialDelaySeconds": 70,
+		"periodSeconds": 10
+	}
+}
